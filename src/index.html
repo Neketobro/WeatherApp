@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="icons/weather/weather-sun-windwows11.svg" type="image/x-icon">
+
+    <title>Weather App | Remake</title>
+</head>
+<body>
+    
+    <header>
+        <div class="wrapper-head">
+            <div class="head-block location">
+                <button id="btnCurrent">
+                    <b><i class="bi bi-geo-alt-fill"></i>Current Location</b>
+                </button>
+            </div>
+            <div class="head-block search-field">
+                <input type="text" id="search" placeholder="Пошук...">
+                <button id="btnSearch" name="btn">Пошук</button>
+            </div>
+            <div class="head-block setting">
+                <input type="checkbox" id="setting" name="Setting panel">
+                <label for="setting">
+                    <div class="icon-setting">
+                        <i class="bx bxs-cog"></i>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <div class="setting-wrapper">
+        <div class="setting-wrapper-title">
+            <h1>Setting</h1>
+        </div>
+        <div class="setting-block"> 
+            <div class="setting-item">
+                <div class="setting-item-title">Dark Theme</div>
+                <div class="switch-theme">
+                    <input type="checkbox" id="switchTheme" name="Theme">
+                    <label for="switchTheme">
+                        <div class="switchTheme-block">
+                            <div class="switchTheme-item"></div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <div class="wrapper wrapper-location">
+
+                <div class="location-block">
+                    <h3 id="wrapperLocationCity">
+                        <!-- Object -->
+                    </h3>
+                    <h1 id="wrapperLocationTime">
+                        <!-- Object -->
+                    </h1>
+                    <p id="wrapperLocationDate">
+                        <!-- Object -->
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="wrapper wrapper-status">
+
+                <div class="status-block">
+
+                    <div class="status-temperature">
+                        <h1 id="statusTemperature">
+                            <!-- Object -->
+                        </h1>
+                        <p id="statusFeelsTemperature">Feels like:<b>
+                            <!-- Object -->
+                        </b></p>
+                    </div>
+
+                    <div class="status-sunrise">
+
+                        <div class="status-sunrise-block">
+                            <div class="status-sunrise-img">
+                                <i class="bi bi-sunrise"></i>
+                            </div>
+                            <div class="status-sunrise-text">
+                                <h3>Sunrise</h3>
+                                <p id="statusSunrise">
+                                    <!-- Object -->
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="status-sunrise-block">
+                            <div class="status-sunrise-img">
+                                <i class="bi bi-sunset"></i>
+                            </div>
+                            <div class="status-sunrise-text">
+                                <h3>Sunset</h3>
+                                <p id="statusSunset">
+                                    <!-- Object -->
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="statusBlockImgStatusLoad" class="status-block status-block-second">
+
+                    <div class="status-block-img-status">
+                        <img id="statusBlockImgStatus" src="#" alt="">
+                    </div>
+                    
+                    <div id="statusBlockStatus" class="status-block-status">
+                        <!-- Object -->
+                    </div>
+
+                </div>
+
+                <div id="statusBlockLastLoad" class="status-block status-block-last">
+
+                    <div class="status-block-info">
+                        <div class="status-block-info-img">
+                            <i class="bi bi-water"></i>
+                        </div>
+                        <div id="statusHumidity" class="status-block-info-status">
+                            <!-- Object -->
+                        </div>
+                        <div class="status-block-info-text">Humidity</div>
+                    </div>
+
+                    <div class="status-block-info">
+                        <div class="status-block-info-img">
+                            <i class="bi bi-speedometer2"></i>
+                        </div>
+                        <div id="statusPressure" class="status-block-info-status">
+                            <!-- Object -->
+                        </div>
+                        <div class="status-block-info-text">Pressure</div>
+                    </div>
+
+                    <div class="status-block-info">
+                        <div class="status-block-info-img">
+                            <i class="bi bi-wind"></i>
+                        </div>
+                        <div id="statusWindSpeed" class="status-block-info-status">
+                            <!-- Object -->
+                        </div>
+                        <div class="status-block-info-text">Wind Speed</div>
+                    </div>
+
+                    <div class="status-block-info">
+                        <div class="status-block-info-img">
+                            <i class="bi bi-browser-chrome"></i>
+                        </div>
+                        <div class="status-block-info-status">?</div>
+                        <div class="status-block-info-text">?</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        
+        <section>
+            <div id="wrapperDaysLoad" class="wrapper wrapper-days">
+
+                <div class="days-title">5 Days Forecast:</div>
+                <div class="days-block">
+
+                    <div class="days-item">
+                        <div class="days-item-img">
+                            <img id="daysItemIcon1" src="#" alt="">
+                        </div>
+                        <div id="daysItemTemp1" class="days-item-temp"></div>
+                        <div id="daysItemDate1" class="days-item-date"><!-- Object --></div>
+                    </div>
+
+                    <div class="days-item">
+                        <div class="days-item-img">
+                            <img id="daysItemIcon2" src="#" alt="">
+                        </div>
+                        <div id="daysItemTemp2" class="days-item-temp"></div>
+                        <div id="daysItemDate2" class="days-item-date"><!-- Object --></div>
+                    </div>
+
+                    <div class="days-item">
+                        <div class="days-item-img">
+                            <img id="daysItemIcon3" src="#" alt="">
+                        </div>
+                        <div id="daysItemTemp3" class="days-item-temp"></div>
+                        <div id="daysItemDate3" class="days-item-date"><!-- Object --></div>
+                    </div>
+
+                    <div class="days-item">
+                        <div class="days-item-img">
+                            <img id="daysItemIcon4" src="#" alt="">
+                        </div>
+                        <div id="daysItemTemp4" class="days-item-temp"></div>
+                        <div id="daysItemDate4" class="days-item-date"><!-- Object --></div>
+                    </div>
+
+                    <div class="days-item">
+                        <div class="days-item-img">
+                            <img id="daysItemIcon5" src="#" alt="">
+                        </div>
+                        <div id="daysItemTemp5" class="days-item-temp"></div>
+                        <div id="daysItemDate5" class="days-item-date"><!-- Object --></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrapperTimesLoad" class="wrapper wrapper-times">
+
+                <div class="times-title">Hourly Forecast:</div>
+                <div class="times-block">
+
+                    <div class="times-item">
+                    <div id="itemTime1" class="times-item-time"></div>
+                        <div class="times-item-img-status">
+                            <img id="iconItemBlock1" src="#" alt="">
+                        </div>
+                        <div id="itemTemp1" class="times-item-temp"></div>
+                        <div class="times-item-img-wind">
+                            <i class="bi bi-wind"></i>
+                        </div>
+                        <div id="itemBlockSpeedWind1" class="times-item-speed-wind"></div>
+                    </div>
+
+                    <div class="times-item">
+                        <div id="itemTime2" class="times-item-time"></div>
+                        <div class="times-item-img-status">
+                            <img id="iconItemBlock2" src="#" alt="">
+                        </div>
+                        <div id="itemTemp2" class="times-item-temp"></div>
+                        <div class="times-item-img-wind">
+                            <i class="bi bi-wind"></i>
+                        </div>
+                        <div id="itemBlockSpeedWind2" class="times-item-speed-wind"></div>
+                    </div>
+
+                    <div class="times-item">
+                        <div id="itemTime3" class="times-item-time"></div>
+                        <div class="times-item-img-status">
+                            <img id="iconItemBlock3" src="#" alt="">
+                        </div>
+                        <div id="itemTemp3" class="times-item-temp"></div>
+                        <div class="times-item-img-wind">
+                            <i class="bi bi-wind"></i>
+                        </div>
+                        <div id="itemBlockSpeedWind3" class="times-item-speed-wind"></div>
+                    </div>
+
+                    <div class="times-item">
+                        <div id="itemTime4" class="times-item-time"></div>
+                        <div class="times-item-img-status">
+                            <img id="iconItemBlock4" src="#" alt="">
+                        </div>
+                        <div id="itemTemp4" class="times-item-temp"></div>
+                        <div class="times-item-img-wind">
+                            <i class="bi bi-wind"></i>
+                        </div>
+                        <div id="itemBlockSpeedWind4" class="times-item-speed-wind"></div>
+                    </div>
+
+                    <div class="times-item">
+                        <div id="itemTime5" class="times-item-time"></div>
+                        <div class="times-item-img-status">
+                            <img id="iconItemBlock5" src="#" alt="">
+                        </div>
+                        <div id="itemTemp5" class="times-item-temp"></div>
+                        <div class="times-item-img-wind">
+                            <i class="bi bi-wind"></i>
+                        </div>
+                        <div id="itemBlockSpeedWind5" class="times-item-speed-wind"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
