@@ -76,6 +76,7 @@ header {
     background: transparent;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 #btnCurrent b {
     text-align: center;

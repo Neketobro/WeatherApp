@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="icons/weather/weather-sun-windwows11.svg" type="image/x-icon">
-
+    <script src="js/index.js" defer></script>
     <title>Weather App | Remake</title>
 </head>
 <body>
-    
     <header>
         <div class="wrapper-head">
             <div class="head-block location">
@@ -33,7 +32,6 @@
             </div>
         </div>
     </header>
-
     <div class="setting-wrapper">
         <div class="setting-wrapper-title">
             <h1>Setting</h1>
@@ -52,11 +50,9 @@
             </div>
         </div>
     </div>
-
     <main>
         <section>
             <div class="wrapper wrapper-location">
-
                 <div class="location-block">
                     <h3 id="wrapperLocationCity">
                         <!-- Object -->
@@ -68,13 +64,9 @@
                         <!-- Object -->
                     </p>
                 </div>
-
             </div>
-
             <div class="wrapper wrapper-status">
-
                 <div class="status-block">
-
                     <div class="status-temperature">
                         <h1 id="statusTemperature">
                             <!-- Object -->
@@ -83,9 +75,7 @@
                             <!-- Object -->
                         </b></p>
                     </div>
-
                     <div class="status-sunrise">
-
                         <div class="status-sunrise-block">
                             <div class="status-sunrise-img">
                                 <i class="bi bi-sunrise"></i>
@@ -97,7 +87,6 @@
                                 </p>
                             </div>
                         </div>
-
                         <div class="status-sunrise-block">
                             <div class="status-sunrise-img">
                                 <i class="bi bi-sunset"></i>
@@ -109,11 +98,8 @@
                                 </p>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-
                 <div id="statusBlockImgStatusLoad" class="status-block status-block-second">
 
                     <div class="status-block-img-status">
@@ -123,9 +109,7 @@
                     <div id="statusBlockStatus" class="status-block-status">
                         <!-- Object -->
                     </div>
-
                 </div>
-
                 <div id="statusBlockLastLoad" class="status-block status-block-last">
 
                     <div class="status-block-info">
@@ -137,7 +121,6 @@
                         </div>
                         <div class="status-block-info-text">Humidity</div>
                     </div>
-
                     <div class="status-block-info">
                         <div class="status-block-info-img">
                             <i class="bi bi-speedometer2"></i>
@@ -147,7 +130,6 @@
                         </div>
                         <div class="status-block-info-text">Pressure</div>
                     </div>
-
                     <div class="status-block-info">
                         <div class="status-block-info-img">
                             <i class="bi bi-wind"></i>
@@ -157,7 +139,6 @@
                         </div>
                         <div class="status-block-info-text">Wind Speed</div>
                     </div>
-
                     <div class="status-block-info">
                         <div class="status-block-info-img">
                             <i class="bi bi-browser-chrome"></i>
@@ -165,18 +146,13 @@
                         <div class="status-block-info-status">?</div>
                         <div class="status-block-info-text">?</div>
                     </div>
-
                 </div>
-
             </div>
         </section>
-        
         <section>
             <div id="wrapperDaysLoad" class="wrapper wrapper-days">
-
                 <div class="days-title">5 Days Forecast:</div>
                 <div class="days-block">
-
                     <div class="days-item">
                         <div class="days-item-img">
                             <img id="daysItemIcon1" src="#" alt="">
@@ -184,7 +160,6 @@
                         <div id="daysItemTemp1" class="days-item-temp"></div>
                         <div id="daysItemDate1" class="days-item-date"><!-- Object --></div>
                     </div>
-
                     <div class="days-item">
                         <div class="days-item-img">
                             <img id="daysItemIcon2" src="#" alt="">
@@ -192,7 +167,6 @@
                         <div id="daysItemTemp2" class="days-item-temp"></div>
                         <div id="daysItemDate2" class="days-item-date"><!-- Object --></div>
                     </div>
-
                     <div class="days-item">
                         <div class="days-item-img">
                             <img id="daysItemIcon3" src="#" alt="">
@@ -200,7 +174,6 @@
                         <div id="daysItemTemp3" class="days-item-temp"></div>
                         <div id="daysItemDate3" class="days-item-date"><!-- Object --></div>
                     </div>
-
                     <div class="days-item">
                         <div class="days-item-img">
                             <img id="daysItemIcon4" src="#" alt="">
@@ -208,7 +181,6 @@
                         <div id="daysItemTemp4" class="days-item-temp"></div>
                         <div id="daysItemDate4" class="days-item-date"><!-- Object --></div>
                     </div>
-
                     <div class="days-item">
                         <div class="days-item-img">
                             <img id="daysItemIcon5" src="#" alt="">
@@ -218,12 +190,9 @@
                     </div>
                 </div>
             </div>
-
             <div id="wrapperTimesLoad" class="wrapper wrapper-times">
-
                 <div class="times-title">Hourly Forecast:</div>
                 <div class="times-block">
-
                     <div class="times-item">
                     <div id="itemTime1" class="times-item-time"></div>
                         <div class="times-item-img-status">
@@ -235,7 +204,6 @@
                         </div>
                         <div id="itemBlockSpeedWind1" class="times-item-speed-wind"></div>
                     </div>
-
                     <div class="times-item">
                         <div id="itemTime2" class="times-item-time"></div>
                         <div class="times-item-img-status">
@@ -247,7 +215,6 @@
                         </div>
                         <div id="itemBlockSpeedWind2" class="times-item-speed-wind"></div>
                     </div>
-
                     <div class="times-item">
                         <div id="itemTime3" class="times-item-time"></div>
                         <div class="times-item-img-status">
@@ -259,7 +226,6 @@
                         </div>
                         <div id="itemBlockSpeedWind3" class="times-item-speed-wind"></div>
                     </div>
-
                     <div class="times-item">
                         <div id="itemTime4" class="times-item-time"></div>
                         <div class="times-item-img-status">
@@ -271,7 +237,6 @@
                         </div>
                         <div id="itemBlockSpeedWind4" class="times-item-speed-wind"></div>
                     </div>
-
                     <div class="times-item">
                         <div id="itemTime5" class="times-item-time"></div>
                         <div class="times-item-img-status">
@@ -287,7 +252,5 @@
             </div>
         </section>
     </main>
-
-    <script src="js/index.js"></script>
 </body>
 </html>

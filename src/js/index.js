@@ -1,9 +1,22 @@
-//to do list
-//  1. Setting panel +
-//  2. Switch theme +
-//  3. API for weather +
-//  4. Search city for weather
-//  5. Current location
+// Night
+// 01n - clear (sun)
+// 02n - moon clouds
+// 03n - cloud
+// 04n - clouds
+// 09n - rain clouds
+// 10n - rain, cloud and moon
+// 11n - Thunderstorm (Гроза)
+// 13n - snowly
+
+// Day
+// 01d - clear-day (sun)
+// 02d - cloud and sun
+// 03d - cloud
+// 04d - clouds
+// 09d - rain clouds
+// 10d - rain, cloud and sun
+// 11d - Thunderstorm (Гроза)
+// 13d - snowly
 
 //  SETTING PANEL OPEN/CLOSE
 document.addEventListener('DOMContentLoaded', function() {
@@ -1077,28 +1090,6 @@ function getWeatherNow(dataNow) {
         statusWindSpeed.innerHTML = templatestatusWindSpeed;
 
 };
-
-// Night
-// 01n - clear (sun)
-// 02n - moon clouds
-// 03n - cloud
-// 04n - clouds
-// 09n - rain clouds
-// 10n - rain, cloud and moon
-// 11n - Thunderstorm (Гроза)
-// 13n - snowly
-
-// Day
-// 01d - clear-day (sun)
-// 02d - cloud and sun
-// 03d - cloud
-// 04d - clouds
-// 09d - rain clouds
-// 10d - rain, cloud and sun
-// 11d - Thunderstorm (Гроза)
-// 13d - snowly
-
-//statusBlockStatus
 
 if (arrayWearther) {
     loadWeather();
